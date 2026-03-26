@@ -14,9 +14,14 @@ class Grid:
 class Bingo:
     def __init__(self):
         self.lines: list[list[Grid]] = []
+        """判定用ライン"""
+        self.card: list[list[int]] = []
+        """ビンゴカード"""
         self.init_lines()
+        self.init_card()
 
     def init_lines(self):
+        """判定用ラインの初期化"""
         for line_x in range(0, 5): # 縦ライン
             new_line: list[Grid] = []
             for line_y in range(0, 5):
@@ -36,6 +41,18 @@ class Bingo:
             line_lb_rt.append(Grid(i, 4 - i))
         self.lines.append(line_lt_rb.copy())
         self.lines.append(line_lb_rt.copy())
+
+    def init_card(self):
+        """ビンゴカードの初期化"""
+        pass
+
+    def print(self):
+        """ビンゴの状態の表示"""
+        pass
+
+    def run(self):
+        """ビンゴゲームの進行"""
+        pass
 
 def main():
     bingo = Bingo()
