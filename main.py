@@ -112,7 +112,7 @@ class Bingo:
     def update_lines(self):
         for i in range(len(self.lines)):
             line = self.lines[i]
-            if line.bingo:
+            if line.is_bingo:
                 continue
             hits = 0
             for grid in line.grids:
